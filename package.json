@@ -1,0 +1,24 @@
+{
+  "name": "bulletchat",
+  "version": "0.0.1",
+  "description": "A general barrage plug-in, not limited to any framework.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibadoo/bulletchat.git"
+  },
+  "keywords": [
+    "danmaku",
+    "bulletChat",
+    "弹幕"
+  ],
+  "author": "SAM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibadoo/bulletchat/issues"
+  },
+  "homepage": "https://github.com/ibadoo/bulletchat#readme"
+}
