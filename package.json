@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/ibadoo/bulletchat/issues"
   },
-  "homepage": "https://github.com/ibadoo/bulletchat#readme"
+  "homepage": "https://github.com/ibadoo/bulletchat#readme",
+  "private": false
 }
