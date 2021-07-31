@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 const { getRandomInt } = require('./utils/tools');
-const { createContainer, createBullet } = require('./core/dom');
+const { BulletContainer, Bullet } = require('./core/dom');
 
 /**
  * @Author: wangzesen
@@ -34,7 +34,7 @@ module.exports = class BulletChat {
     this.parentDom = parentDom;
 
     // 当前弹幕容器
-    this.container = createContainer(parentDom, this.hashKey);
+    this.bulletContainer = new BulletContainer(this.hashKey).mounted(parentDom);
 
     // 窗口尺寸变化时，进行重新计算区域外宽度
     window.addEventListener('resize', this.setOffAreaWidth.bind(this));
@@ -45,19 +45,16 @@ module.exports = class BulletChat {
 
   // 设置区域外宽度
   setOffAreaWidth() {
-    if (this.container) {
-      const { offsetWidth, offsetHeight } = this.container;
-      // 计算区域外的宽度，用于弹幕起始位置
-      this.offAreaWidth = document.body.offsetWidth - offsetWidth;
-      this.containerHight = offsetHeight;
-    }
+    this.offAreaWidth = this.bulletContainer.getOffAreaWidth();
+    const { height } = this.bulletContainer.getSize();
+    this.containerHight = height;
   }
 
   // 添加一个弹幕实时
   add(payload) {
     const params = this.createBulletParams(payload);
-    const bullet = createBullet(payload, this.hashKey, params);
-    this.container.append(bullet);
+    const bullet = new Bullet(payload, this.hashKey, params);
+    this.bulletContainer.add(bullet);
   }
 
   // 设置弹幕位置
@@ -80,10 +77,6 @@ module.exports = class BulletChat {
       top: (panelHeight / sum) * ix - 1,
       // 偏移值
       offAreaWidth: this.offAreaWidth,
-      // 事件集
-      events: {
-        animationend: typeof payload.animationend === 'function' ? payload.animationend : null,
-      },
     };
   }
 };

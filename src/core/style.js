@@ -1,6 +1,14 @@
 /* eslint-disable */
 
+/**
+ * @Author: SAM
+ * @Description: 初始化样式
+ * @Date: 2021-08-01 02:18:58
+ * @param {string} hashKey 唯一key
+ * @return {viod} 无
+ */
 exports.initStyle = function initStyle(hashKey) {
+  // 如果已经有该样式标签
   if (document.querySelector(`style[${hashKey}]`)) {
     return;
   }
