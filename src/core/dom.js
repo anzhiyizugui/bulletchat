@@ -20,7 +20,6 @@ exports.createContainer = function (parentDom, hashKey) {
   parentDom.append(panel);
 
   const parentCss = window.getComputedStyle(parentDom);
-  parentDom.style.overflow = 'hidden';
 
   if (!positionList.includes(parentCss.position)) {
     parentDom.style.position = 'relative';
