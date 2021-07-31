@@ -7,9 +7,14 @@ npm install bulletchat
 
 #### 使用说明
 
-1.  const Bulletchat = require('bulletchat');
-2.  const bulletchat = new Bulletchat(parentDom);
-3.  bulletchat.add({ id, nickName, content })
+1.  引用模块
+-   const Bulletchat = require('bulletchat');
+
+2.  使用new关键字创建一个实例，需要传入一个容器dom对象
+-   const bulletchat = new Bulletchat(parentDom);
+
+3.  添加弹幕
+-   bulletchat.add({ id, nickName, content })
 
 #### 参与贡献
 

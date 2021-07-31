@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 exports.createHash = function (hashLength) {
   if (!hashLength || typeof Number(hashLength) !== 'number') {
     return;

@@ -1,18 +1,4 @@
-/*
- * @Author       : wangzesen
- * @Description  :
- * @FilePath     : /src/core/dom.js
- * @Date         : 2021-07-31 01:08:02
- * @LastEditors  : wangzesen
- * @LastEditTime : 2021-07-31 01:29:28
- * @Copyright    : Copyright © 2021 OneCloud Info, Inc. All rights reserved.
- *
- * This software is the confidential and proprietary information of
- * OneCloud Co., Ltd. ("Confidential Information"). You shall not
- * disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into
- * with OneCloud.
- */
+/* eslint-disable */
 
 const { initStyle } = require('./style');
 
