@@ -111,17 +111,8 @@ class Bullet {
     // 设置唯一标识
     domBullet.setAttribute(hashKey, '');
 
-    // 名称
-    const domNickName = document.createElement('span');
-    domNickName.className = 'nickName';
-
-    // 内容
-    const domContent = document.createElement('span');
-    domContent.className = 'content';
-
-    // 插入弹幕
-    domBullet.appendChild(domNickName);
-    domBullet.appendChild(domContent);
+    // 弹幕内容
+    domBullet.innerHTML = `<span ${hashKey} class="nickName"></span><span ${hashKey} class="content"></span>`;
 
     // 记录唯一key
     this.key = hashKey;
