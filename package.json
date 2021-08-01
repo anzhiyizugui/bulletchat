@@ -1,6 +1,6 @@
 {
   "name": "bulletchat",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A general barrage plug-in, not limited to any framework.",
   "main": "src/index.js",
   "scripts": {
